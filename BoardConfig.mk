@@ -196,3 +196,4 @@ TW_BOARD_CUSTOM_GRAPHICS := ../../../device/oneplus/oneplus2/graphics.c
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
+TW_INCLUDE_CRYPTO := true
