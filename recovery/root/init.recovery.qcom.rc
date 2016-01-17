@@ -1,14 +1,5 @@
-on early-init
-    mkdir /firmware 0771 system system
-
 on fs
     wait /dev/block/bootdevice/by-name/modem
     mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0
 
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro
-
-on firmware_mounts_complete
-   symlink /system/vendor /vendor
-
-service qseecomd /system/bin/qseecomd
+service qseecomd /vendor/bin/qseecomd
