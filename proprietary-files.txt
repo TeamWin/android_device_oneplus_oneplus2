@@ -242,7 +242,6 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
-lib/liboneplus_camera.so
 lib/libopcamera.so
 lib/hw/camera.msm8994.so
 lib/libmmcamera_interface.so
@@ -453,7 +452,6 @@ bin/xtwifi-client
 vendor/bin/slim_ap_daemon
 
 # Radio
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
@@ -479,18 +477,18 @@ vendor/lib64/libxml.so
 bin/sensors.qcom
 etc/firmware/tp/14049/14049_FW_S1302.img
 etc/firmware/tp/14049/14049_FW_S3320_jdi.img
-lib64/hw/wbc_hal.default.so
-lib/hw/wbc_hal.default.so
 vendor/lib64/hw/activity_recognition.msm8994.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/hw/sensors.msm8994.so
 vendor/lib64/hw/sensors.oem.so
+vendor/lib64/hw/wbc_hal.default.so
 vendor/lib/hw/activity_recognition.msm8994.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/hw/sensors.msm8994.so
 vendor/lib/hw/sensors.oem.so
+vendor/lib/hw/wbc_hal.default.so
 
 # Lights
 lib64/hw/lights.msm8994.so
@@ -498,6 +496,15 @@ lib/hw/lights.msm8994.so
 
 # TZBSP
 bin/qseecomd
+lib64/hw/keystore.qcom.so
+lib64/libbinder.so
+lib64/libEGL.so
+lib64/libGLES_trace.so
+lib64/libGLESv2.so
+lib64/libgui.so
+lib64/libsigchain.so
+lib64/libsync.so
+lib64/libui.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libmasc.so
@@ -513,6 +520,8 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsi.so
 vendor/lib64/libssd.so
 vendor/lib64/libSSEPKCS11.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libtime_genoff.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -556,7 +565,7 @@ etc/firmware/fingerprintsecurity.b01
 etc/firmware/fingerprintsecurity.b02
 etc/firmware/fingerprintsecurity.b03
 etc/firmware/fingerprintsecurity.mdt
-lib/hw/fingerprint.msm8994.so
+lib/hw/fingerprint_module.default.so
 lib64/libqseecom_fingerprints_client.so
 lib/libqseecom_fingerprints_client.so
 vendor/lib64/libqfp-service.so

@@ -196,3 +196,36 @@ TW_BOARD_CUSTOM_GRAPHICS := ../../../device/oneplus/oneplus2/graphics.c
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
+TW_INCLUDE_CRYPTO := true
+
+ifneq ($(TARGET_RECOVERY_ROOT_OUT),)
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/firmware)
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/vendor/lib64/hw)
+$(shell ln -s /sbin $(TARGET_RECOVERY_ROOT_OUT)/system/bin)
+endif
+
+PRODUCT_COPY_FILES += \
+    vendor/oneplus/oneplus2/proprietary/bin/qseecomd:recovery/root/vendor/bin/qseecomd \
+    vendor/oneplus/oneplus2/proprietary/lib64/hw/keystore.qcom.so:recovery/root/vendor/lib64/hw/keystore.qcom.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libEGL.so:recovery/root/vendor/lib64/libEGL.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libGLES_trace.so:recovery/root/vendor/lib64/libGLES_trace.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libGLESv2.so:recovery/root/vendor/lib64/libGLESv2.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libbinder.so:recovery/root/vendor/lib64/libbinder.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libcnefeatureconfig.so:recovery/root/vendor/lib64/libcnefeatureconfig.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libgui.so:recovery/root/vendor/lib64/libgui.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libsigchain.so:recovery/root/vendor/lib64/libsigchain.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libsync.so:recovery/root/vendor/lib64/libsync.so \
+    vendor/oneplus/oneplus2/proprietary/lib64/libui.so:recovery/root/vendor/lib64/libui.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/lib-sec-disp.so:recovery/root/vendor/lib64/lib-sec-disp.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libNimsWrap.so:recovery/root/vendor/lib64/libNimsWrap.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libStDrvInt.so:recovery/root/vendor/lib64/libStDrvInt.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libsecureui.so:recovery/root/vendor/lib64/libsecureui.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libsecureui_svcsock.so:recovery/root/vendor/lib64/libsecureui_svcsock.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libtime_genoff.so:recovery/root/vendor/lib64/libtime_genoff.so \
+    vendor/oneplus/oneplus2/proprietary/vendor/lib64/libvendorconn.so:recovery/root/vendor/lib64/libvendorconn.so
