@@ -3,3 +3,5 @@ allow sensors device:dir { write add_name };
 allow sensors input_device:chr_file { relabelfrom getattr link };
 allow sensors stm_sensor:chr_file relabelto;
 allow sensors input_device:dir search;
+allow sensors unlabeled:dir { r_dir_perms setattr write add_name };
+allow sensors unlabeled:file { w_file_perms read getattr };

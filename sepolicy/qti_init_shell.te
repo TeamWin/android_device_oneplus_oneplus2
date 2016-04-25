@@ -4,3 +4,5 @@ allow qti_init_shell kmsg_device:chr_file { write open };
 allow qti_init_shell persist_bluetooth_file:dir search;
 allow qti_init_shell persist_bluetooth_file:file { read getattr open };
 allow qti_init_shell smem_log_device:chr_file { read write ioctl open };
+allow qti_init_shell unlabeled:dir { search getattr };
+allow qti_init_shell unlabeled:file { read getattr setattr };

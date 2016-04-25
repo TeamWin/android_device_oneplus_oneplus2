@@ -12,3 +12,6 @@
 /dev/input/event2                                               u:object_r:stm_sensor:s0
 
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
+
+# Performance related sysfs files
+/sys/block/mmcblk0/queue/scheduler                             u:object_r:sysfs_devices_system_iosched:s0

@@ -1,3 +1,5 @@
 allow mm-qcamerad cam_sysfs:file { open read write };
 allow mm-qcamerad stm_sensor:chr_file { ioctl open read };
 allow mm-qcamerad system_file:file execmod;
+allow mm-qcamerad node:tcp_socket { node_bind setopt };
+allow mm-qcamerad self:tcp_socket { bind create setopt listen };
