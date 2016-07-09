@@ -43,3 +43,5 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 TARGET_VENDOR := oneplus
 
 WITH_SU=false
+
+TARGET_UNOFFICIAL_BUILD_ID := anupritaisno1
