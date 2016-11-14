@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8994 \
+    libprotobuf-cpp-full \
     libshim_camera \
     libshim_ims-camera \
     sensors.hal.tof
