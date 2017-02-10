@@ -51,6 +51,16 @@ persist.dpm.feature=7
 persist.env.fastdorm.enabled=true
 persist.sys.dpmd.nsrm=3
 
+# Enahnced 4g tweak
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.data.iwlan.enable=true
+persist.dbg.wfc_avail_ovr=0
+persist.ims.volte=true
+persist.volte_enabled_by_hw=1
+
+
 # Debug logging for DPM & CNE can be enabled via:
 # Push libdpmlog.so to system/vendor/lib|64
 #persist.dpm.nsrm.bkg.evt=3955
