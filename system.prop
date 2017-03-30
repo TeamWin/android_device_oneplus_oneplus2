@@ -129,3 +129,12 @@ persist.timed.enable=true
 
 # Wifi
 persist.data.iwlan.enable=true
+
+# Safetynet
+ro.boot.verifiedbootstate=green
+ro.boot.flash.locked=1
+ro.boot.veritymode=enforcing
+ro.boot.warranty_bit=0
+ro.warranty_bit=0
+ro.debuggable=0
+ro.secure=1
