@@ -3,3 +3,4 @@ allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver audio_device:chr_file { ioctl open read write };
 allow mediaserver system_data_file:sock_file write;
 allow mediaserver camera_data_file:dir search;
+allow mediaserver camera_data_file:dir r_dir_perms;
