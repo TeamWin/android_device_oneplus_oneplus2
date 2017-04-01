@@ -138,3 +138,5 @@ ro.boot.warranty_bit=0
 ro.warranty_bit=0
 ro.debuggable=0
 ro.secure=1
+ro.boot.secboot=enabled
+ro.boot.enable_dm_verity=1
