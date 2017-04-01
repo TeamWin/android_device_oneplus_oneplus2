@@ -85,6 +85,9 @@ ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
 ro.opengles.version=196610
 
+# Selinux hardening
+ro.boot.selinux=enforcing
+
 # QC vendor extension
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.frp.pst=/dev/block/bootdevice/by-name/config
