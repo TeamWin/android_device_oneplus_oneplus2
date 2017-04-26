@@ -96,7 +96,7 @@ drm.service.enabled=true
 # haruhi props
 ro.haruhi.rom=1
 ro.haruhi.support=current
-ro.haruhi.optimized=0
+ro.haruhi.optimized=1
 
 # RIL
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
