@@ -1,5 +1,8 @@
 # system.prop for OnePlus2
 
+# fix play store certification
+ro.build.oemfingerprint=6.0.1/MMB29M/1447841200:user/release-keys
+
 # Audio
 audio.offload.video=true
 persist.audio.fluence.voicecall=true
