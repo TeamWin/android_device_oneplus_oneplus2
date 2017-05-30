@@ -75,6 +75,8 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/Suzu.memeYa/toolchain/bin/aarch64-li
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+# Dexpreopt
+WITH_DEXPREOPT := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-uart"
