@@ -224,7 +224,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.safetynet.rc
 
 # RIL
 PRODUCT_PACKAGES += \

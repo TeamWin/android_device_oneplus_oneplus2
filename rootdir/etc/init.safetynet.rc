@@ -1,0 +1,13 @@
+on boot
+setprop ro.boot.verifiedbootstate green
+setprop ro.boot.flash.locked 1
+setprop ro.boot.veritymode enforcing
+setprop ro.boot.warranty_bit 0
+setprop ro.warranty_bit 0
+setprop ro.debuggable 0
+setprop ro.secure 1
+setprop ro.boot.secboot enabled
+setprop ro.boot.enable_dm_verity 1
+
+on property:sys.boot_completed=1
+setprop sys.oem_unlock_allowed 0
