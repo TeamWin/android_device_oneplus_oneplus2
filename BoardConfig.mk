@@ -73,8 +73,6 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
 TARGET_KERNEL_CONFIG := haruhi_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/Suzu.memeYa/toolchain/bin/aarch64-linux-gnu-
 
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
 # Dexpreopt
 WITH_DEXPREOPT := true
 
@@ -117,6 +115,10 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
+# CM Hardware
+BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap"
+
 # CNE and DPM
 TARGET_LDPRELOAD := libNimsWrap.so
 BOARD_USES_QCNE := true
@@ -157,23 +159,35 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 59047394304
+BOARD_FLASH_BLOCK_SIZE := 262144
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+
 # RIL
 TARGET_RIL_VARIANT := caf
 
 # RPC
 TARGET_NO_RPC := true
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
-# Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -194,32 +208,20 @@ CONFIG_EAP_PROXY_DUAL_SIM := true
 CONFIG_EAP_PROXY_AKA_PRIME := true
 CONFIG_EAP_PROXY_MSM8994_TARGET := true
 
-
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 59047394304
-BOARD_FLASH_BLOCK_SIZE := 262144
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
+# Enable dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
-# Time services
-BOARD_USES_QC_TIME_SERVICES := true
-
-# CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap"
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus2/BoardConfigVendor.mk
