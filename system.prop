@@ -63,7 +63,18 @@ persist.data.iwlan.enable=true
 persist.dbg.wfc_avail_ovr=0
 persist.ims.volte=true
 persist.volte_enabled_by_hw=1
+net.lte.volte_call_capable=true
+persist.radio.calls.on.ims=true
+persist.radio.csvt.enabled=false
+persist.radio.jbims=1
+persist.radio.ROTATION_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
 
+# Silence debug
+persist.ims.enableADBLogs=0
+persist.ims.enableDebugLogs=0
 
 # Debug logging for DPM & CNE can be enabled via:
 # Push libdpmlog.so to system/vendor/lib|64
