@@ -249,6 +249,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
+# Weather providers
+PRODUCT_PACKAGES += \
+	OpenWeatherMapWeatherProvider \
+	YahooWeatherProvider \
+	WundergroundWeatherProvider
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
