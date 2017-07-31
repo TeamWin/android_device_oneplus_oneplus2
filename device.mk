@@ -259,6 +259,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Fdroid
+PRODUCT_PACKAGES += \
+    FDroidPrivilegedExtension
+
 # VR
 PRODUCT_PACKAGES += \
     vr.msm8994
