@@ -45,3 +45,9 @@ TARGET_VENDOR := oneplus
 WITH_SU=false
 
 TARGET_UNOFFICIAL_BUILD_ID := anupritaisno1
+
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ota.romname=Haruhirom \
+	ro.ota.version=$(shell date +"%Y%m%d") \
+	ro.ota.manifest=https://raw.githubusercontent.com/GlassROM-devices/o/o/o
