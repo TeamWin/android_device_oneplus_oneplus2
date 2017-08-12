@@ -223,17 +223,17 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.bt.sh \
-    init.zram.sh
-
-PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.oneplus2.power.sh \
+    init.qcom.bt.sh \
     init.qcom.power.rc \
+    init.qcom.recovery \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     ueventd.qcom.rc \
+    init.zram.sh \
     init.safetynet.rc
 
 # RIL
