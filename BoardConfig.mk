@@ -126,6 +126,7 @@ BOARD_USES_QCNE := true
 
 # Cpusets
 ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
 ENABLE_SCHED_BOOST := true
 
 # GPS
