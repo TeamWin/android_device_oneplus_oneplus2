@@ -263,9 +263,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FDroidPrivilegedExtension
 
-PRODUCT_PACKAGES += \
-    OTAUpdates
-
 # VR
 PRODUCT_PACKAGES += \
     vr.msm8994
