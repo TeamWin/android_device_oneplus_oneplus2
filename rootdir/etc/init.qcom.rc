@@ -93,9 +93,6 @@ on init
     chown system system /sys/class/leds/led:torch_1/brightness
     chmod 0666 /sys/class/leds/led:torch_1/brightness
 
-    # Scheduler
-    chown system system /sys/module/cpu_boost/parameters/sysctl_thermal_aware_scheduling
-
     # Display color calibration
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
@@ -509,6 +506,15 @@ on property:sys.boot_completed=1
 
     # Enable schedtune.boost (EAS only)
     write /dev/stune/top-app/schedtune.boost 50
+
+    # EAS setup
+    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1 
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor sched
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor sched
 
 # start services from here
 # start camera server as daemon
