@@ -49,9 +49,6 @@ write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
 # /sys/. These files receive the default label "sysfs".
 restorecon -R /sys/module/msm_performance/parameters
 
-# Limit A57 max freq from msm_perf module in case CPU 4 is offline
-write /sys/module/msm_performance/parameters/cpu_max_freq "4:960000 5:960000 6:960000 7:960000"
-
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor sched
 restorecon -R /sys/devices/system/cpu # must restore after interactive
@@ -72,11 +69,10 @@ write /sys/devices/system/cpu/cpu7/online 1
 # Restore CPU 4 max freq from msm_performance
 write /sys/module/msm_performance/parameters/cpu_max_freq "4:4294967295 5:4294967295 6:4294967295 7:4294967295"
 
-
 # Setting B.L scheduler parameters
 write /proc/sys/kernel/sched_migration_fixup 1
 write /proc/sys/kernel/sched_small_task 30
-write /proc/sys/kernel/sched_upmigrate 99
+write /proc/sys/kernel/sched_upmigrate 95
 write /proc/sys/kernel/sched_downmigrate 85
 write /proc/sys/kernel/sched_freq_inc_notify 400000
 write /proc/sys/kernel/sched_freq_dec_notify 400000
