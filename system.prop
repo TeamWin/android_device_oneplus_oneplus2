@@ -135,6 +135,8 @@ ro.boot.selinux=enforcing
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 drm.service.enabled=true
+ro.core_ctl_min_cpu=1
+ro.core_ctl_max_cpu=4
 
 # haruhi props
 ro.haruhi.rom=1
