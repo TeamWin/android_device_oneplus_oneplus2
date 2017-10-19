@@ -49,20 +49,6 @@ write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
 # /sys/. These files receive the default label "sysfs".
 restorecon -R /sys/module/msm_performance/parameters
 
-# Enable CPU retention
-write /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a53/cpu1/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a53/cpu2/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a53/cpu3/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a57/cpu4/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a57/cpu5/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a57/cpu6/retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a57/cpu7/retention/idle_enabled 1
-
-# Enable L2 retention
-write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 1
-write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 1
-
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor sched
 restorecon -R /sys/devices/system/cpu # must restore after interactive
