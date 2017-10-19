@@ -1,4 +1,4 @@
-# ACDB
+# ACDB - OxygenOS 3.6.0
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 etc/acdbdata/MTP/MTP_General_cal.acdb
 etc/acdbdata/MTP/MTP_Global_cal.acdb
@@ -7,13 +7,13 @@ etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 etc/acdbdata/MTP/MTP_Headset_cal.acdb
 etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 
-# ADSP
+# ADSP - OxygenOS 3.6.0
 bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsprpc.so
 
-# Audio
+# Audio - OxygenOS 3.6.0
 etc/firmware/tfa98xx.cnt
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -21,6 +21,7 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libhwdaphal.so
+vendor/lib/hw/sound_trigger.primary.msm8994.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -31,7 +32,7 @@ vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libhwdaphal.so
 
-# Bluetooth
+# Bluetooth - OxygenOS 3.6.0
 bin/btnvtool
 bin/hci_qcomm_init
 bin/wcnss_filter
@@ -48,7 +49,7 @@ etc/firmware/rampatch_tlv_3.2.tlv
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
-# Camera
+# Camera - OxygenOS 3.6.0
 bin/mm-qcamera-app
 bin/mm-qcamera-daemon
 lib/hw/camera.msm8994.so:lib/hw/camera.vendor.msm8994.so
@@ -107,12 +108,12 @@ vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libmmcamera2_sensor_debug.so
 vendor/lib64/libmmcamera2_stats_algorithm.so
 
-# Camera actuators
+# Camera actuators - OxygenOS 3.6.0
 vendor/lib/libactuator_rohm_bu63165gwl.so
 vendor/lib/libactuator_rohm_bu63165gwl_camcorder.so
 vendor/lib/libactuator_rohm_bu63165gwl_camera.so
 
-# Camera chromatix
+# Camera chromatix - OxygenOS 3.6.0
 vendor/lib/libchromatix_ov13860_common.so
 vendor/lib/libchromatix_ov13860_cpp_hfr.so
 vendor/lib/libchromatix_ov13860_cpp_liveshot.so
@@ -148,7 +149,7 @@ vendor/lib/libchromatix_ov5648_30fps_snapshot.so
 vendor/lib/libchromatix_ov5648_30fps_video.so
 vendor/lib/libchromatix_ov5648_common.so
 
-# Camera firmware
+# Camera firmware - OxygenOS 3.6.0
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
@@ -156,7 +157,7 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 
-# Camera sensors
+# Camera sensors - OxygenOS 3.6.0
 vendor/lib/libmmcamera_isp_abf44.so
 vendor/lib/libmmcamera_isp_bcc44.so
 vendor/lib/libmmcamera_isp_be_stats44.so
@@ -232,6 +233,9 @@ vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
+# Display calibration - OxygenOS 3.6.0
+-etc/pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel.xml
+
 # DPM
 bin/dpmd
 etc/dpm/dpm.conf
@@ -253,16 +257,16 @@ vendor/lib64/libdpmframework.so
 vendor/lib64/libdpmnsrm.so
 vendor/lib64/libdpmtcm.so
 
-# DRM
+# DRM - OxygenOS 3.6.0
 bin/qseecomd
 vendor/lib/libQSEEComAPI.so
-vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 
-# Fingerprint sensor
+# Fingerprint sensor - OxygenOS 3.6.0
 etc/firmware/fingerprints.b00
 etc/firmware/fingerprints.b01
 etc/firmware/fingerprints.b02
@@ -273,7 +277,7 @@ lib/lib_fpc_tac_shared.so
 lib64/hw/fingerprint.msm8994.so
 lib64/lib_fpc_tac_shared.so
 
-# Gatekeeper
+# Gatekeeper - OxygenOS 3.6.0
 vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
@@ -318,18 +322,16 @@ vendor/lib64/libulp2.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 
-# Graphics
+# Graphics - kanged from Angler N2G48C
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/hw/vulkan.msm8994.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
-vendor/lib/libOpenCL.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
@@ -346,13 +348,11 @@ vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/vulkan.msm8994.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
@@ -367,18 +367,15 @@ vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
 vendor/lib64/libuiblur.so
 
-# Graphics firmware
+# Graphics firmware - OxygenOS 3.6.0
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
-# Keystore
+# Keystore - OxygenOS 3.6.0
 vendor/lib/hw/keystore.msm8994.so
 vendor/lib64/hw/keystore.msm8994.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msm8994.so
-
-# Media
+# Media - OxygenOS 3.6.0
 vendor/lib/libDivxDrm.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libOmxAacDec.so
@@ -398,7 +395,7 @@ vendor/lib64/libSHIMDivxDrm.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal.so
 
-# Media firmware
+# Media firmware - OxygenOS 3.6.0
 etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
@@ -407,7 +404,7 @@ etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
-# Modem
+# Modem - OxygenOS 3.6.0
 etc/firmware/mbn_ota/mcfg_sw_ATT-VoLTE.mbn
 etc/firmware/mbn_ota/mcfg_sw_CMCC_CSFB_DSDS_Commercial_Volte.mbn
 etc/firmware/mbn_ota/mcfg_sw_CU_OpenMkt-Commercial.mbn
@@ -421,10 +418,11 @@ vendor/lib/libconnctrl.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
-# Perf
+# Perf - OxygenOS 3.6.0
 bin/energy-awareness
 bin/msm_irqbalance
 vendor/bin/perfd
+vendor/etc/msm_irqbalance.conf
 vendor/etc/perf-profile0.conf
 vendor/etc/perf-profile1.conf
 vendor/etc/perf-profile2.conf
@@ -434,7 +432,7 @@ vendor/etc/perf-profile5.conf
 vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-perfd-client.so
 
-# Peripheral manager
+# Peripheral manager - OxygenOS 3.6.0
 bin/pm-proxy
 bin/pm-service
 vendor/lib/libperipheral_client.so
@@ -555,8 +553,9 @@ vendor/lib64/libvoice-svc.so
 -vendor/app/ims/ims.apk|21f343af6b656ad1dc890b18fed940ad61e31fb0
 -vendor/app/imssettings/imssettings.apk|87ada7621f77f9cf8efa27ebb46157c98df3a7cc
 
-# Sensors
+# Sensors - OxygenOS 3.6.0
 bin/sensors.qcom
+etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
 vendor/lib/hw/activity_recognition.msm8994.so
 vendor/lib/libsensor1.so
@@ -571,7 +570,7 @@ vendor/lib64/libsensor_thresh.so
 vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal
+# Thermal - OxygenOS 3.6.0
 etc/thermal-engine.conf
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
@@ -586,7 +585,7 @@ vendor/lib/libTimeService.so
 vendor/lib64/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 
-# TP Firmware
+# TP Firmware - OxygenOS 3.6.0
 etc/firmware/tp/14049/14049_FW_S1302.img
 etc/firmware/tp/14049/14049_FW_S3320_jdi.img
 
