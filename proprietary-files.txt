@@ -212,10 +212,10 @@ etc/cne/andsfCne.xml
 etc/permissions/ConnectivityExt.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
-framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
-framework/com.quicinc.cne.jar|647d841a0d89b64daf6befa61747dc62ac757ba5
--priv-app/CNEService/CNEService.apk|e4a3bcf497bf1e2cc822205bc9adc59ac232cb6c
+framework/ConnectivityExt.jar
+framework/cneapiclient.jar
+framework/com.quicinc.cne.jar
+-priv-app/CNEService/CNEService.apk
 vendor/lib/libNimsWrap.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
@@ -242,10 +242,11 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar|58be891df339d36f4ecd49dad4a19f16c6b237e3
-framework/dpmapi.jar|0015235ff71d52d1b340b10ce4fa737fa26975ef
-framework/tcmclient.jar|e7149c664f4b1841139ab816c0d4e0942df0583c
--priv-app/dpmserviceapp/dpmserviceapp.apk|f6b0e77918e7bdd00e67c95c65277b625e26d2a7
+framework/com.qti.dpmframework.jar
+framework/dpmapi.jar
+framework/tcmclient.jar
+-priv-app/dpmserviceapp/dpmserviceapp.apk
+
 vendor/lib/libdpmctmgr.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libdpmframework.so
@@ -285,12 +286,12 @@ vendor/lib64/hw/gatekeeper.msm8994.so
 bin/loc_launcher
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
-framework/com.qti.location.sdk.jar|5f813d74715b42dc5175563cd5027269c5fe08fb
+framework/com.qti.location.sdk.jar
 -lib/libloc_api_v02.so
 -lib/libloc_ds_api.so
 -lib64/libloc_api_v02.so
 -lib64/libloc_ds_api.so
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|11c5e4aacb2e346645b9ab37f7f01d08a16e9297
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
 vendor/lib/libdataitems.so
@@ -413,7 +414,7 @@ etc/firmware/mbn_ota/mcfg_sw_Reliance-Commercial.mbn
 etc/firmware/mbn_ota/mcfg_sw_TMO-Commercial.mbn
 
 # Network - OxygenOS 3.6.0 + OP3 OB24 / OB15
--priv-app/QtiTetherService/QtiTetherService.apk|be881927cd74d877ef1b5dcb82f6e6b1ef433a1e
+-priv-app/QtiTetherService/QtiTetherService.apk
 vendor/lib/libconnctrl.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
@@ -488,10 +489,10 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libsmemlog.so
 
 # Radio - OxygenOS 3.6.0 + OP3 OB24 / OB15
--app/datastatusnotification/datastatusnotification.apk|17e5d0279cdd7edb2fd44a412ca1f6d98ff608b0
--app/fastdormancy/fastdormancy.apk|988efae0c91db1e44dac2132986953a7c19e53ae
--app/QtiTelephonyService/QtiTelephonyService.apk|768ce8bd9a373d7cda0b79d25c1d0417cb8727a6
--app/shutdownlistener/shutdownlistener.apk|ecebc61b2ef92f47675ee093acacb872663751ad
+-app/datastatusnotification/datastatusnotification.apk
+-app/fastdormancy/fastdormancy.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk
+-app/shutdownlistener/shutdownlistener.apk
 bin/ipacm-diag
 bin/netmgrd
 bin/qmuxd
@@ -504,12 +505,12 @@ etc/data/qmi_config.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
--framework/qcnvitems.jar|124cd6e6da26b0bd05f7add1e49bd1c5e039a2e2
--framework/qcrilhook.jar|efd442eeb37c6286b84e97221a16a4884e695e25
-framework/qti-telephony-common.jar|3cea332c3cc179fae5691763c8e55027cc76ffc8
-framework/QtiTelephonyServicelibrary.jar|7c2370674e249cd9637a6b69429fc8362189b79d
+-framework/qcnvitems.jar
+-framework/qcrilhook.jar
+framework/qti-telephony-common.jar
+framework/QtiTelephonyServicelibrary.jar
 lib64/libparam.so
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|7688dfdc612ce1515cbe001803d74c6e951b511b
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/qti
 -vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
@@ -550,8 +551,8 @@ vendor/lib64/libimscamera_jni.so
 vendor/lib64/libimsmedia_jni.so
 vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
--vendor/app/ims/ims.apk|ec9d14a42c9aa4e7ee24cc6e02a13c02c84d94c5
--vendor/app/imssettings/imssettings.apk|3e08617cbb63bd4169c90285598b2f54c4e41076
+-vendor/app/ims/ims.apk
+-vendor/app/imssettings/imssettings.apk
 
 # Sensors - OxygenOS 3.6.0
 bin/sensors.qcom
@@ -578,7 +579,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Time services - OxygenOS 3.6.0 + OP3 OB24 / OB15
--app/TimeService/TimeService.apk|782a2b7082326404a5d6c2cbda156dc6c1c1f071
+-app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
