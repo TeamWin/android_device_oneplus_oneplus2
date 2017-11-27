@@ -5,6 +5,7 @@
 /devinfo        emmc        /dev/block/bootdevice/by-name/devinfo
 
 /system         ext4        /dev/block/bootdevice/by-name/system
+/system_image   emmc        /dev/block/bootdevice/by-name/system
 /data           ext4        /dev/block/bootdevice/by-name/userdata          length=-16384
 /cache          ext4        /dev/block/bootdevice/by-name/cache
 
