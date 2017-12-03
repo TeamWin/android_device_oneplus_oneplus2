@@ -389,6 +389,10 @@ on post-fs-data
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
+    # TCP fast open
+    chown system system /proc/sys/net/ipv4/tcp_fastopen
+    write /proc/sys/net/ipv4/tcp_fastopen 3
+
     # We will remap this as /mnt/sdcard with the sdcard fuse tool
     mkdir /data/misc/camera 0770 camera camera
 
